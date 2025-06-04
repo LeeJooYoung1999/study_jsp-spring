@@ -14,13 +14,13 @@ import java.io.IOException;
 // ○ login.jsp로 포워딩
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String userid = req.getParameter("userid");
         String passwd = req.getParameter("passwd");
 
-        req.setAttribute("userid", userid);
-        req.setAttribute("passwd", passwd);
+        req.setAttribute("userid", userid); //요청request에 userid담기(set)
+        req.setAttribute("passwd", passwd); //요청request에 passwd담기(set)
 
-        req.getRequestDispatcher("login.jsp").forward(req, res);
+        req.getRequestDispatcher("login.jsp").forward(req, resp); //login.jsp로 포워드해주기.
     }
 }

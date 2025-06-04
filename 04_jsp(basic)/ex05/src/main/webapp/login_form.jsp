@@ -4,7 +4,7 @@
     <title>로그인 폼</title>
 </head>
 <body>
-<form action="login" method="get">
+<form action="login" method="post">
     <fieldset>
         <legend>로그인 폼</legend>
         <ul style="list-style: none;">
