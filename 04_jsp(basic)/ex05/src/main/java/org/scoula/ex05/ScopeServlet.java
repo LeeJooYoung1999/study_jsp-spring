@@ -17,25 +17,26 @@ import java.io.IOException;
 
 @WebServlet("/scope")
 public class ScopeServlet extends HttpServlet {
-    ServletContext sc;
+    ServletContext sc; //이녀석의 용도는 서블릿 컨테이너 내의 전역정보(전역변수+어플리케이션 설정값)를 관리하기 위함.
 
     @Override
     public void init(ServletConfig config) throws ServletException {
         sc = config.getServletContext();
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
         sc.setAttribute("scopeName", "applicationScope 값"); // Application Scope
 
-        HttpSession session = request.getSession(); // Session Scope
+        HttpSession session = req.getSession(); // Session Scope
         session.setAttribute("scopeName", "sessionScope 값");
 
-        request.setAttribute("scopeName", "requestScope 값"); // Request Scope
+        req.setAttribute("scopeName", "requestScope 값"); // Request Scope
         Member member = new Member("홍길동", "hong");
-        request.setAttribute("member", member);
+        req.setAttribute("member", member);
 
-        request.getRequestDispatcher("scope.jsp").forward(request, response);
+        req.getRequestDispatcher("scope.jsp").forward(req, resp);
+        //System.out.println("ScopeServlet doGet");
     }
 }
