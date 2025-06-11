@@ -11,6 +11,7 @@
     <title>basicOnlyGet 입니다.</title>
 </head>
 <body>
-
+    <h2>url: sample/basicOnlyGet 입니다.</h2>
+    <h2>메소드: basicGet2() 입니다.</h2>
 </body>
 </html>

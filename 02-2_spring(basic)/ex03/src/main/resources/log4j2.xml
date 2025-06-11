@@ -12,7 +12,7 @@
             <AppenderRef ref="console"/>
         </Root>
 
-<!--    log4j2.xml 을 수정하여 HandlerMapping의 등록정보를 확인하세요.-->
+<!--    슬라이드5: log4j2.xml 을 수정하여 HandlerMapping의 등록정보를 확인하세요.-->
         <Logger name="_org.springframework.web.servlet.HandlerMapping.Mappings" level="DEBUG" additivity="false" >
             <AppenderRef ref="console"/>
         </Logger>
