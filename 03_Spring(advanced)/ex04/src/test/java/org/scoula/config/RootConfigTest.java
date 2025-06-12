@@ -1,6 +1,8 @@
 package org.scoula.config;
 
 import lombok.extern.log4j.Log4j2;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -29,6 +31,22 @@ class RootConfigTest {
         try ( Connection con = dataSource.getConnection()){
             log.info("dbcp로 부터 연결 하나 가지고 왔음.");
             log.info(con);
+        }
+    }
+
+    @Autowired
+    private SqlSessionFactory sqlSessionFactory;
+
+    @Test
+    public void testSqlSessionFactory() {
+        try (
+                SqlSession session = sqlSessionFactory.openSession();
+                Connection con = session.getConnection();
+        ) {
+            log.info(session);
+            log.info(con);
+        } catch (Exception e) {
+            fail(e.getMessage());
         }
     }
 }

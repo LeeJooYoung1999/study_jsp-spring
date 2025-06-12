@@ -17,6 +17,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @PropertySource({"classpath:/application.properties"})
+@MapperScan(basePackages = {"org.scoula.mapper"})
 public class RootConfig {
 
     //db사용 --> google mybatis사용 설정
@@ -37,5 +38,26 @@ public class RootConfig {
         HikariDataSource dataSource = new HikariDataSource(config);
 
         return dataSource;
+    }
+
+    //db사용 --> google mybatis사용 설정
+    //트랜잭션 설정
+
+
+    @Autowired
+    ApplicationContext applicationContext;
+
+    @Bean
+    public SqlSessionFactory sqlSessionFactory() throws Exception {
+        SqlSessionFactoryBean sqlSessionFactory = new SqlSessionFactoryBean();
+        sqlSessionFactory.setConfigLocation(applicationContext.getResource("classpath:/mybatis-config.xml"));
+        sqlSessionFactory.setDataSource(dataSource());
+        return (SqlSessionFactory) sqlSessionFactory.getObject();
+    }
+
+    @Bean
+    public DataSourceTransactionManager transactionManager(){
+        DataSourceTransactionManager manager = new DataSourceTransactionManager(dataSource());
+        return manager;
     }
 }
