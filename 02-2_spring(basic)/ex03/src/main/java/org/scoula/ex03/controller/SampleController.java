@@ -61,8 +61,8 @@ public class SampleController {
     }
 
     //SampleController에 다음을 처리하는 ex06 메서드를작성하세요.
-    //  ○ GET으로/sample/ex06 요청시 /sample/ex06-2로 리다이렉트
-    //  ○ 리다이렉트될때name=AAA, age=10을 쿼리문자열에 추가
+    //  ○ GET으로 /sample/ex06 요청시 /sample/ex06-2로 리다이렉트
+    //  ○ 리다이렉트될때 name=AAA, age=10을 쿼리문자열에 추가
     @GetMapping("/ex06")
     public String ex06(RedirectAttributes ra) {
         log.info("/ex06................");
