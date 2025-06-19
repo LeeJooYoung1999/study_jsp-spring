@@ -26,11 +26,11 @@
 | 01        | Spring 이해                   | ✅        | ☐        | `01_Spring(basic)`  | `01_Spring(advanced)` |
 | 02        | Spring MVC                    | ✅        | ✅       | `02_Spring(basic)`  | `02_Spring(advanced)` |
 | 03        | Spring-MyBatis 연동           | ✅        | ☐         | `03_Spring(basic)`  | `03_Spring(advanced)` |
-| 04        | Spring 기본게시판              | ☐        | ☐         | `04_Spring(basic)`  | `04_Spring(advanced)` |
-| 05        | Spring 기본게시판, 파일업로드   | ☐        | ☐         | `05_Spring(basic)`  | `05_Spring(advanced)` |
-| 06        | Rest                          | ☐        | ☐         | `06_Spring(basic)`  | `06_Spring(advanced)` |
-| 07        | OpenAPI                       | ☐        | ☐         | `07_Spring(basic)`  | `07_Spring(advanced)` |
-| 08        | Spring AOP                    | ☐        | ☐         | `08_Spring(basic)`  | `08_Spring(advanced)` |
+| 04        | Spring 기본게시판              | ✅        | ☐         | `04_Spring(basic)`  | `04_Spring(advanced)` |
+| 05        | Spring 기본게시판, 파일업로드   | ✅        | ☐         | `05_Spring(basic)`  | `05_Spring(advanced)` |
+| 06        | Rest                          | ✅        | ☐         | `06_Spring(basic)`  | `06_Spring(advanced)` |
+| 07        | OpenAPI                       | ✅        | ☐         | `07_Spring(basic)`  | `07_Spring(advanced)` |
+| 08        | Spring AOP                    | ✅        | ☐         | `08_Spring(basic)`  | `08_Spring(advanced)` |
 | 09        | Spring Security Form 인증     | ☐        | ☐         | `09_Spring(basic)`  | `09_Spring(advanced)` |
 | 10        | Spring Security JWT 인증      | ☐        | ☐         | `10_Spring(basic)`  | `10_Spring(advanced)` |
 | 11        | Spring Security JWT 인증      | ☐        | ☐         | `11_Spring(basic)`  | `11_Spring(advanced)` |
