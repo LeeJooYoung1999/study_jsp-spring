@@ -3,7 +3,6 @@ package org.scoula.advice;
 import lombok.extern.log4j.Log4j2;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
-import org.scoula.sample.service.SampleService;
 import org.springframework.stereotype.Component;
 
 @Aspect  // 부가적기능이 정의된 클래스임을 명시 => (관점지향프로그래밍 AOP)
@@ -15,7 +14,6 @@ public class LogAdvice {
     //클래스의 이름위에 @Aspect 해줘야함.
 
     @Before("execution(* org.scoula.sample.service.SampleService*.*(..))")
-    //@Before("execution(*org.scoula.sample.service.SampleService*.*(..))")
     public void logBefore(){
         log.info("==========================");
     }
