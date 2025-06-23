@@ -31,7 +31,7 @@
 | 06        | Rest                          | ✅        | ☐         | `06_Spring(basic)`  | `06_Spring(advanced)` |
 | 07        | OpenAPI                       | ✅        | ☐         | `07_Spring(basic)`  | `07_Spring(advanced)` |
 | 08        | Spring AOP                    | ✅        | ☐         | `08_Spring(basic)`  | `08_Spring(advanced)` |
-| 09        | Spring Security Form 인증     | ☐        | ☐         | `09_Spring(basic)`  | `09_Spring(advanced)` |
+| 09        | Spring Security Form 인증     | ✅        | ☐         | `09_Spring(basic)`  | `09_Spring(advanced)` |
 | 10        | Spring Security JWT 인증      | ☐        | ☐         | `10_Spring(basic)`  | `10_Spring(advanced)` |
 | 11        | Spring Security JWT 인증      | ☐        | ☐         | `11_Spring(basic)`  | `11_Spring(advanced)` |
 
